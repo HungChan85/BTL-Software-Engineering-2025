@@ -1,0 +1,150 @@
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom right, #b2f2bb, #74c69d);
+  background-image: url("/public/assets/background.jpg");
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+}
+
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Transparent “glass” box */
+.login-box {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 30px 40px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  width: 340px;
+  color: white;
+}
+/* Container for logo + title */
+.login-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers the group in the box */
+  gap: 10px; /* space between logo and text */
+  margin-bottom: 20px;
+}
+
+/* Logo style */
+.logo-login {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Title style */
+.login-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+
+h2 {
+  text-align: center;
+  color: #fff;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+.login-button {
+  width: 100%;
+  background-color: rgba(0, 123, 255, 0.8);
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.login-button:hover {
+  background-color: rgba(0, 123, 255, 1);
+}
+
+/* Bottom section: language + change password */
+.bottom-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* Language button (left) */
+.lang-button {
+  background: rgba(255, 255, 255, 0.25);
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.lang-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Change password link (right) */
+.change-password-link {
+  color: white;
+  text-decoration: none;
+  font-size: 0.9em;
+}
+
+.change-password-link:hover {
+  text-decoration: underline;
+}
+/* Container for logo + title */
+.login-header {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* centers the group in the box */
+  gap: 10px; /* space between logo and text */
+  margin-bottom: 20px;
+}
+
+/* Logo style */
+.logo-login {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+/* Title style */
+.login-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
