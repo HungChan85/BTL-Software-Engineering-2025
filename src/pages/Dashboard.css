@@ -133,26 +133,3 @@
   border-left: 5px solid #005a9e; /* Blue accent */
 }
 
-/* === DEV ONLY: Role Switcher === */
-.dev-role-switcher {
-  padding: 1rem;
-  margin-bottom: 2rem;
-  border-radius: 8px;
-}
-
-.dev-role-switcher strong {
-  margin-right: 1rem;
-}
-
-.dev-role-switcher button {
-  margin-right: 0.5rem;
-  padding: 0.3rem 0.6rem;
-  border: 1px solid #ccc;
-  background-color: #f9f9f9;
-  cursor: pointer;
-  border-radius: 4px;
-}
-
-.dev-role-switcher button:hover {
-  background-color: #eee;
-}
