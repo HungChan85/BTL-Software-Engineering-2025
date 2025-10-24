@@ -18,6 +18,8 @@ export default function Login() {
           ? `Logged in as ${role}`
           : `Đăng nhập thành công với vai trò ${role === "student" ? "học sinh" : "gia sư"}`
       );
+      localStorage.setItem('userRole', role);
+
       navigate("/home");
     } else {
       alert(language === "en" ? "Please fill in all fields." : "Vui lòng điền đầy đủ thông tin.");

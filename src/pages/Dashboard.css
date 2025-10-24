@@ -1,0 +1,158 @@
+
+
+/* === Main Layout === */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* === Navigation Bar === */
+.dashboard-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #ddd;
+}
+
+.dashboard-logo {
+  height: 40px;
+  width: auto;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.lang-button-nav {
+  background: none;
+  border: none;
+  color: #0066cc; /* Link color */
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.logout-button {
+  padding: 0.5rem 1rem;
+  background-color: #d9534f; /* Red for logout */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.logout-button:hover {
+  background-color: #c9302c;
+}
+
+/* === Main Content Area === */
+.dashboard-content {
+  flex-grow: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* === Widget Grid === */
+.widget-grid {
+  display: grid;
+  /* Responsive grid: 
+     - 1 column on small screens
+     - 2 columns on medium screens
+     - 4 columns on large screens
+  */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* === Widget Card === */
+.widget-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.widget-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.widget-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #555;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 0.75rem;
+}
+
+.widget-data {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #333;
+}
+
+/* For list-like data */
+.widget-data-list {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+/* Highlight important numbers */
+.highlight {
+  color: #005a9e; /* HCMUT Blue */
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.highlight-secondary {
+  color: #d9534f; /* Red for actions */
+  font-weight: 600;
+}
+
+/* Special styling for high-priority cards */
+.widget-card.priority {
+  border-left: 5px solid #005a9e; /* Blue accent */
+}
+
+/* === DEV ONLY: Role Switcher === */
+.dev-role-switcher {
+  padding: 1rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+}
+
+.dev-role-switcher strong {
+  margin-right: 1rem;
+}
+
+.dev-role-switcher button {
+  margin-right: 0.5rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.dev-role-switcher button:hover {
+  background-color: #eee;
+}

@@ -5,6 +5,11 @@
 html,
 body {
   /* Use Poppins (imported in public/index.html) as the primary font */
+  background: linear-gradient(to bottom right, #b2f2bb, #74c69d);
+  background-image: url("/public/assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 #root {

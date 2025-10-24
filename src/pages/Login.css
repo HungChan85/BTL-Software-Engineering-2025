@@ -1,10 +1,5 @@
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom right, #b2f2bb, #74c69d);
-  background-image: url("/public/assets/background.jpg");
-    background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   margin: 0;
   padding: 0;
 }
