@@ -162,12 +162,7 @@ export default function Dashboard() {
         
 
       </nav>
-
-      {/* === Main Content Area === */}
       <main className="dashboard-content">
-
-        
-
 
         {role === "student" && <StudentDashboard />}
         {role === "tutor" && <TutorDashboard />}
