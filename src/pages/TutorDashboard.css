@@ -1,0 +1,121 @@
+.availability-card .card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.availability-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.avail-grid {
+  display: grid;
+  grid-template-columns: 100px repeat(7, 1fr);
+  /* 1 label column + 7 day columns */
+  grid-auto-rows: 28px; /* row height per hour */
+  gap: 2px;
+  margin-top: 12px;
+  user-select: none;
+}
+
+.avail-corner {
+  /* top-left empty corner */
+}
+
+.avail-day-header {
+  text-align: center;
+  font-weight: 600;
+  font-size: 13px;
+  color: #374151;
+  padding: 6px 0;
+}
+
+.avail-hour-label {
+  font-size: 12px;
+  color: #6b7280;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+}
+
+.avail-cell {
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  transition: background 0.08s ease, border-color 0.08s ease;
+  cursor: crosshair;
+}
+
+.avail-cell:hover {
+  border-color: #c7d2fe;
+}
+
+.avail-cell.active {
+  background: #4f75ff;
+  border-color: #4166ff;
+}
+
+.avail-legend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+  color: #6b7280;
+  font-size: 12px;
+}
+
+.legend-box {
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  display: inline-block;
+  border: 1px solid #e5e7eb;
+  margin-right: 4px;
+}
+.legend-box.on { background: #4f75ff; border-color: #4166ff; }
+.legend-box.off { background: #f3f4f6; }
+
+.legend-hint {
+  margin-left: auto;
+}
+
+.availability-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.summary-day {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.summary-day-name {
+  font-weight: 600;
+  color: #374151;
+  font-size: 13px;
+}
+
+.summary-empty {
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.summary-ranges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.summary-range {
+  background: #eef2ff;
+  color: #374151;
+  border: 1px solid #e0e7ff;
+  border-radius: 9999px;
+  padding: 2px 8px;
+  font-size: 12px;
+}

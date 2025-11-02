@@ -129,8 +129,8 @@ export default function Dashboard() {
               </div>
             </div>
             <div className="profile-actions">
-              <button className="btn-outline">Edit Profile</button>
-              <Link to="/courses" className="btn-primary">My Courses</Link>
+              <button className="btn-outline" onClick={() => navigate("/profile")}>Edit Profile</button>
+              <Link to="" className="btn-primary">My Courses</Link>
             </div>
           </div>
         </section>

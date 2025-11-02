@@ -38,7 +38,7 @@ export default function Login() {
       tutor: "Tutor",
       login: "Login",
       switchTo: "Tiếng Việt",
-      changePassword: "Change password",
+      register: "Đăng ký",
     },
     vi: {
       title: "Đăng nhập",
@@ -49,7 +49,7 @@ export default function Login() {
       tutor: "Gia sư",
       login: "Đăng nhập",
       switchTo: "English",
-      changePassword: "Đổi mật khẩu",
+      register: "Register",
     },
   };
 
@@ -106,8 +106,8 @@ export default function Login() {
             {t[language].switchTo}
           </button>
 
-          <a href="#" className="change-password-link">
-            {t[language].changePassword}
+          <a href="#" onClick={(e) => {navigate("/register"); }} className="change-password-link">
+            {t[language].register}
           </a>
         </div>
       </div>

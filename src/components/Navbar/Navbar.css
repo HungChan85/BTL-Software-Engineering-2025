@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
+  padding: 10px 20px;
   background: #fff;
   border-bottom: 1px solid #eef4fb;
   position: sticky;
@@ -72,4 +72,19 @@
   padding: 8px 12px;
   border-radius: 8px;
   cursor: pointer;
+}
+
+.nav-chat-btn {
+  background: none;
+  border: 1px solid #e6eef8;
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.nav-chat-btn:hover {
+  background: #e8f1fb;
+  border-color: #d0e4ff;
 }
