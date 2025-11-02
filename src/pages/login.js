@@ -95,7 +95,7 @@ export default function Login() {
             </select>
           </div>
 
-          <button type="submit" className="login-button">
+          <button type="submit" className="login-button" onClick={handleSubmit}>
             {t[language].login}
           </button>
         </form>

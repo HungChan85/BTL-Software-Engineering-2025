@@ -1,0 +1,87 @@
+/* src/pages/Dashboard.css - 3-column layout (profile | calendar | right column) */
+
+:root {
+  --accent: #0b66c2;
+  --muted: #6b7280;
+  --card-bg: #fff;
+  --radius: 10px;
+}
+
+/* Basic page reset */
+.dashboard-root { min-height: 100vh; background-image: url("/public/assets/background.jpg");  background-size: cover; background-repeat: no-repeat;background-position: center; font-family: Inter, Arial, sans-serif; }
+.container-3col { max-width: 1200px; margin: 28px auto; padding: 0 20px; display: grid; grid-template-columns: 1fr 1.1fr 0.95fr; gap: 20px; align-items: start; }
+
+
+
+/* CARD common */
+.card { background:var(--card-bg); border-radius:var(--radius); padding:16px; box-shadow:0 6px 18px rgba(12,38,76,0.04); }
+
+/* LEFT: Profile Square */
+.profile-square {
+  display:flex; flex-direction:column; gap:14px; align-items:center; justify-content:flex-start;
+  height: 340px; /* medium square (approx S2) */
+  padding:20px;
+  text-align:center;
+}
+.profile-avatar-large { width:120px; height:120px; border-radius:10px; object-fit:cover; }
+.profile-name { font-weight:700; color:#0b2640; font-size:1.1rem; }
+.profile-role { color:var(--muted); margin-top:6px; }
+.profile-email { color:var(--muted); font-size:0.9rem; }
+.profile-stats-grid { display:flex; gap:10px; width:100%; margin-top:8px; }
+.pstat { flex:1; background:#f5f8ff; padding:10px; border-radius:8px; }
+.pstat-num { font-weight:800; font-size:1.25rem; color:var(--accent); }
+.pstat-label { color:var(--muted); margin-top:6px; }
+.profile-actions { display:flex; gap:8px; width:100%; justify-content:center; margin-top:auto; }
+.btn-outline { border:1px solid #e6eef8; background:#fff; color:var(--accent); padding:8px 12px; border-radius:8px; cursor:pointer; }
+.btn-primary { background:var(--accent); color:#fff; padding:8px 12px; border-radius:8px; text-decoration:none; }
+
+/* CENTER: Mini Calendar */
+.mini-calendar { display:flex; flex-direction:column; gap:10px; }
+.mini-cal-header { display:flex; justify-content:space-between; align-items:center; }
+.mini-cal-title { font-weight:700; color:#0b2640; }
+.cal-nav { border:none; background:#eef7ff; color:var(--accent); padding:6px 10px; border-radius:8px; cursor:pointer; }
+.mini-weekdays { display:grid; grid-template-columns:repeat(7,1fr); font-size:0.75rem; color:var(--muted); }
+.mini-grid { display:grid; grid-template-columns:repeat(7,1fr); gap:6px; margin-top:6px; }
+.mini-cell { min-height:64px; padding:6px; border-radius:8px; position:relative; background:transparent; border:1px solid #fafcff; }
+.mini-other { opacity:0.45; color:#9aa9c3; }
+.mini-today { background: linear-gradient(90deg, rgba(11,102,194,0.06), rgba(11,102,194,0.03)); border:1px solid rgba(11,102,194,0.12); }
+.mini-day { font-weight:600; color:#0b2640; }
+.mini-dot { width:8px; height:8px; border-radius:50%; background:var(--accent); position:absolute; bottom:6px; right:6px; }
+.mini-footer { display:flex; justify-content:flex-end; margin-top:8px; }
+.mini-open { color:var(--accent); font-weight:600; text-decoration:none; }
+
+/* RIGHT: Upcoming & Feedback stacked */
+.upcoming-card, .feedback-card { margin-bottom:18px; }
+.card-head { display:flex; justify-content:space-between; align-items:center; margin-bottom:8px; }
+.card-title { font-weight:700; color:#0b2640; }
+.small-link { color:var(--accent); text-decoration:none; font-weight:600; }
+.empty { color:var(--muted); padding:16px 0; }
+
+/* upcoming list */
+.upcoming-list { display:flex; flex-direction:column; gap:8px; }
+.upcoming-item { display:flex; gap:12px; align-items:center; padding:8px 0; border-bottom:1px solid #f1f5f9; }
+.up-date { min-width:90px; color:var(--muted); font-size:0.9rem; }
+.up-title { font-weight:600; color:#0b2640; }
+
+/* feedback list (cards) */
+.feedback-list { display:flex; flex-direction:column; gap:10px; max-height:300px; overflow:auto; padding-right:6px; }
+.feedback-card-item { display:flex; gap:12px; align-items:flex-start; padding:10px; border-radius:8px; background:#fbfdff; border:1px solid #eef7ff; }
+.fb-left { min-width:110px; }
+.fb-tutor { font-weight:700; color:#0b2640; }
+.fb-date { color:var(--muted); font-size:0.85rem; margin-top:4px; }
+.fb-right { flex:1; }
+.fb-short { font-weight:600; color:#0b2640; }
+.fb-details { color:var(--muted); margin-top:6px; font-size:0.95rem; }
+/* Calendar Card (center column) */
+.calendar-card {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* responsive: stack columns on small screens */
+@media (max-width: 980px) {
+  .container-3col { grid-template-columns: 1fr; }
+  .profile-square { height: auto; }
+}
